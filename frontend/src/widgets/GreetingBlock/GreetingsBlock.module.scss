@@ -1,0 +1,136 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.GreetingBlock {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-image: url("shared/assets/images/backgrounds/background1920.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  height: 490px;
+  overflow-x: hidden;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 40px;
+  @media screen and (max-width: 767px) {
+    height: unset;
+  }
+
+}
+.GreetingBlock p {
+  color: white;
+}
+.welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  backdrop-filter: blur(3px);
+}
+
+.content {
+  align-self: flex-end;
+  flex-direction: column;
+  //padding: 160px 30px 80px;
+  gap: 20px;
+  z-index: 3;
+  padding: 0 0 30px 60px;
+  > :nth-child(n) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+  }
+}
+.title{
+  p {
+    font-weight: $weight_medium;
+  }
+  h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: $weight_bold;
+  }
+  //@media ($isMobile) {
+  //  p {
+  //    color: black;
+  //  }
+  //}
+}
+.buttons {
+  display: flex;
+  //justify-content: flex-end;
+  @media ($isMobile) {
+    //justify-content: space-between;
+    gap: 25px;
+    justify-content: flex-start;
+  }
+  @media screen and (max-width: 767px) {
+    justify-items: center;
+    flex-direction: column;
+    > button {
+      width: 80%;
+    }
+  }
+}
+.description {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: flex-end;
+  p {
+    flex-grow: 1;
+    //color: #787878;
+    font-weight: $weight_normal;
+  }
+  @media ($isMobile) {
+    gap: 10px;
+    max-width: 460px;
+    p {
+      flex-grow: 0;
+      flex-shrink: 1;
+      //color: $gray;
+    }
+  }
+}
+.entity_photo {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  //left: 49%;
+  right: -40px;
+  z-index: -1;
+  img {
+    display: block;
+    height: 100%;
+    margin: unset;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.entity_photo_between {
+  display: none;
+  img {
+    display: block;
+    height: 100%;
+    margin: unset;
+  }
+  @media screen and (max-width: 767px) {
+    display: block;
+    position: relative;
+    bottom: 0;
+    img {
+      max-width: 390px;
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+}

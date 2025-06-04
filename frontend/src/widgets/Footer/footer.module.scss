@@ -1,0 +1,162 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $blue;
+}
+.footer_content {
+  width: 100%;
+  padding: 50px 50px 50px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: row;
+  @media(max-width: 1080px) {
+    align-self: center;
+    max-width: 700px;
+    padding: 20px 10px 10px 10px;
+    row-gap: 15px;
+    grid-template-areas:
+    "row1 row1"
+    "row2 row2"
+    "row6 row7"
+    "row4 row4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  p, a {
+    color: white;
+  }
+}
+.left_content {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+  @media(max-width: 1080px) {
+    grid-area: row4;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.mid_content {
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  > :nth-child(1) {
+    font-weight: $weight_light;
+  }
+  > :nth-child(2) {
+    font-weight: $weight_bold;
+  }
+  > :nth-child(3) {
+    font-weight: $weight_light;
+  }
+  > :nth-child(4) {
+    font-weight: $weight_bold;
+  }
+  @media(max-width: 1080px) {
+    grid-area: row7;
+    gap: 10px;
+  }
+}
+
+.right_content {
+  width: 100%;
+  position: relative;
+  justify-self: center;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media(max-width: 1080px) {
+    grid-area: row2;
+  }
+}
+
+.media_icons {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  img {
+    width: 50px;
+    height: auto;
+  }
+  @media(max-width: 1080px) {
+    grid-area: row1;
+  }
+}
+
+.links {
+  width: 100%;
+  position: relative;
+  > ul {
+    align-content: space-around;
+    list-style-type: none;
+    display: flex;
+    min-width: 100%;
+    max-height: 100px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    gap: 10px;
+    > li {
+      width: max-content;
+    }
+    > li > a {
+      //font-size: 18px;
+      border-bottom: solid white 1px;
+    }
+  }
+  @media(max-width: 1080px) {
+    grid-area: row2;
+  }
+  @media(max-width: 420px) {
+    > ul > li > a {
+      font-size: 18px;
+    }
+  }
+}
+
+.online_booking {
+  display: flex;
+  gap: 50px;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  @media(max-width: 1080px) {
+    grid-area: row6;
+    gap: 0;
+    align-self: center;
+    justify-self: center;
+  }
+  > p {
+    flex-basis: 50%;
+    @media(max-width: 1080px) {
+      //flex-basis: 30%;
+    }
+  }
+  //@media(max-width: 1080px) {
+  //  display: grid;
+  //  gap: 0px;
+  //  grid-template-columns: 1fr 1fr;
+  //  > div {
+  //    display: flex;
+  //    justify-content: center;
+  //    button {
+  //    }
+  //  }
+  //  //gap: 0px;
+  //  //justify-content: space-evenly;
+  //}
+}

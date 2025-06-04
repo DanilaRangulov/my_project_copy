@@ -1,0 +1,59 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.doctor_item {
+  background-image: url("shared/assets/images/backgrounds/background_nika.png");
+  max-width: 450px;
+  min-width: 300px;
+  height: 248px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  padding: 15px 15px 0px 15px;
+  overflow: hidden;
+  @media ($isMobile) {
+    height: 192px;
+  }
+  .doctor_information {
+    z-index: 3;
+    max-width: 220px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    .bottom_content {
+      gap: 30px;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .doctor_img {
+    position: absolute;
+    height: 100%;
+    right: -60px;
+    z-index: 1;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+.name {
+  font-weight: $weight_medium;
+}
+.doctor_item:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: brightness(90%);
+}
+.grade {
+  display: flex;
+  color: red;
+}
+.grade::before {
+  display: flex;
+  content: "★";
+  color: red;
+}

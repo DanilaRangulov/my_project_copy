@@ -1,0 +1,27 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.CardList {
+  margin: auto;
+  transition: visibility 0.5s linear;
+}
+.list {
+  width: 100%;
+  margin: auto;
+  //justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(325px,1fr));
+  gap: 20px;
+  transition: all 1s linear;
+  @include default_padding_block;
+
+}
+.head_h1 {
+  margin-bottom: 24px;
+}
+.CardListButton {
+  display: none;
+  margin: 20px auto;
+}
+.isDisplay {
+  display: block;
+}

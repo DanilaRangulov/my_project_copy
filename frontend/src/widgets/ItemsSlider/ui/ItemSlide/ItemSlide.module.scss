@@ -1,0 +1,53 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.itemSlide {
+  background-color: transparent;
+  justify-content: flex-end;
+  position: relative;
+  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  flex-wrap: wrap;
+  border-radius: 10px;
+  overflow: hidden;
+  @include default_border
+}
+.item_content {
+  grid-column-start: 5;
+  grid-column-end: 13;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+  flex: 2;
+  padding: 40px;
+  //@include default_border;
+}
+.text_description {
+  font-weight: $weight_normal;
+  color: $gray;
+}
+.item_img {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  //position: absolute;
+  height: 100%;
+  background-color: red;
+  display: block;
+  position: relative;
+  flex: 1;
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+.title {
+  font-size: 32px;
+  font-weight: $weight_bold;
+}
+//.benefit_content,
+//.benefit_img {
+//  flex: 1; // Заставляем оба блока занимать равную высоту
+//}

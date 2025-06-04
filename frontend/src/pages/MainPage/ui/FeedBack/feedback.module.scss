@@ -1,0 +1,23 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.feedback {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  //gap: 20px;
+  //@media screen and (max-width: 1080px) {
+  //  padding: 16px;
+  //}
+  > button {
+    margin: auto;
+    margin-top: 20px;
+  }
+  @include default_padding_block;
+}
+.cards_list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(325px,1fr));
+  gap: 20px;
+}

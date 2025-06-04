@@ -1,0 +1,10 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.choise_clinic_data_menu{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  @include mobile_default_padding_left
+}

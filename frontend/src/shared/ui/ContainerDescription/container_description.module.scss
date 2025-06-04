@@ -1,0 +1,28 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.container_description {
+  flex-direction: column;
+  margin-bottom: 30px;
+  //max-width: 70%;
+  //@media screen and (max-width: 768px) {
+  //  max-width: 100%;
+  //}
+  > p {
+    text-align: center;
+    //@include mobile_default_padding_left;
+    @media screen and (max-width: 768px) {
+      text-align: initial;
+    }
+  }
+  :nth-child(2) {
+    max-width: 60%;
+    margin: auto;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  :nth-child(1) {
+    font-weight: 450;
+  }
+  @include default_padding_block;
+}

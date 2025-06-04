@@ -1,0 +1,22 @@
+.dropdown {
+  display: flex;
+  position: relative;
+  width: auto;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    border-bottom: 4px solid black;
+  }
+}
+.menu {
+  position: absolute; /* Абсолютное позиционирование списка */
+  top: 100%; /* Расположение списка под ссылкой */
+  left: 0;
+  list-style-type: none;
+}
+.menu_item {
+  text-decoration: none;
+}
+.testss {
+  position: relative;
+}

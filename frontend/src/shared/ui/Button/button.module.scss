@@ -1,0 +1,16 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.button {
+  display: block;
+  align-self: center;
+  padding: 15px 15px 15px 15px;
+  border-radius: 10px;
+  transition: background-color 0.2s linear;
+  cursor: grab;
+  @media ($isMobile){
+    padding: 13px 25px 13px 25px;
+  }
+}
+//.button:hover {
+//  background-color: #3d57e1;
+//}

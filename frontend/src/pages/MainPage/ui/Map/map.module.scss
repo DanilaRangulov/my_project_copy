@@ -1,0 +1,74 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+//@media screen and (max-width: 1080px) {
+//  padding: 16px;
+//}
+.map {
+  @include default_border;
+  display: flex;
+  background-color: $white;
+  flex-direction: row;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+}
+.map_wrapper {
+  @media screen and (max-width: 1080px) {
+    padding: 16px;
+  }
+}
+
+.yandex_map {
+  min-height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-grow: 1;
+  min-width: 270px;
+}
+
+.map_text_content {
+  @include default_padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //height: 400px;
+  gap: 15px;
+  > :first-child {
+    font-weight: 440;
+  }
+}
+
+.work_time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.media_icons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  img {
+    width: 40px;
+    height: auto;
+  }
+}
+.metro {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.metro_item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  position: relative;
+  align-items: center;
+  > svg {
+    //height: 100%;
+    width: 24px;
+    height: 24px;
+  }
+}

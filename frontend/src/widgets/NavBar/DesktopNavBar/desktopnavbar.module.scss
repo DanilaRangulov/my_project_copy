@@ -1,0 +1,59 @@
+@import "app/styles/variables/variables";
+.desktop_nav_bar {
+  width: 100%;
+  position: relative;
+  a, p {
+    font-weight: 300;
+  }
+}
+.main_navbar {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: solid #ECECEC 2px;
+}
+.main_navbar_content {
+  max-width: 1680px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 15px 0px 15px 0;
+}
+.main_navbar a {
+  display: flex;
+  align-items: center;
+}
+.mini_navbar {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  position: relative;
+  width: 100%;
+}
+.mini_navbar_content {
+  width: 100%;
+  max-width: 1680px;
+  padding: 15px 0px 15px 0;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+}
+.mini_navbar_content_right {
+  display: flex;
+  flex-basis: 40%;
+  justify-content: space-around;
+}
+.mini_navbar_content_left {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+@media ($isMobile) {
+  .desktop_nav_bar {
+    display: none;
+  }
+}

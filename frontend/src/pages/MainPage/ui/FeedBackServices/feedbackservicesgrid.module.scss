@@ -1,0 +1,16 @@
+.FeedBackServices {
+  //display: flex;
+  //flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.FeedBackList {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  //justify-content: space-around;
+  //gap: 20px;
+}

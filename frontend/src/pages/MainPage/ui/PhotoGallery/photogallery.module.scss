@@ -1,0 +1,16 @@
+.selection {
+  border: none;
+  background-image: none;
+  appearance: none;
+  font-size: 24px;
+  user-select: none;
+  text-decoration: underline;
+}
+select:focus {
+  border-color: #4CAF50; /* Можно задать свой цвет для границы при фокусе */
+  outline: none; /* Убираем контур при фокусе */
+}
+.choise_gallery {
+  display: flex;
+  flex-direction: row;
+}

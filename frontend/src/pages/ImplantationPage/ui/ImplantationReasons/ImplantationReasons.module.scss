@@ -1,0 +1,10 @@
+.ImplantationReasons {
+  margin: auto;
+  > :nth-child(n) {
+    //margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  > :first-child {
+    margin-bottom: 24px;
+  }
+}

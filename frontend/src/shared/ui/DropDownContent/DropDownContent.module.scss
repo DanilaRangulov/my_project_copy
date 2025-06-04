@@ -1,0 +1,74 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.DropDownContent {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  //margin: auto;
+  transition: all 0.5s linear;
+  //display: inline-block;
+  max-width: 580px;
+}
+.title {
+  font-weight: $weight_medium;
+}
+.top_content{
+  display: flex;
+  align-items: center;
+  padding: 15px 15px 15px 15px;
+  gap: 10px;
+}
+.hiddenContentWrapper {
+  display: flex;
+  overflow: hidden;
+  transition: visibility 0.2s linear, height 0.2s linear;
+  height: 0;
+  visibility: hidden;
+  //padding: 10px 10px 10px 10px;
+}
+.hiddenContentBody {
+  padding: 15px 15px 15px 15px;
+}
+.opened {
+  display: flex;
+  height: 100px;
+  visibility: visible;
+}
+
+
+
+.plusminus {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+  &.active {
+    &:before {
+      transform: translatey(-50%) rotate(-90deg);
+      opacity: 0;
+    }
+    &:after {
+      transform: translatey(-50%) rotate(0);
+    }
+  }
+
+  &:before , &:after {
+    content: "";
+    display: block;
+    background-color: #333;
+    position: absolute;
+    top: 50%; left: 0;
+    transition: .35s;
+    width: 100%;
+    height: 3px;
+  }
+
+  &:before {
+    transform: translatey(-50%);
+  }
+
+  &:after {
+    transform: translatey(-50%) rotate(90deg);
+  }
+
+}

@@ -1,0 +1,36 @@
+{
+  "Novorossiysk": [
+    {
+      "id": 1,
+      "imageUrl": "https://example.com/image1.jpg",
+      "title": "First Slide"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://example.com/image2.jpg",
+      "title": "Second Slide"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://example.com/image3.jpg",
+      "title": "Third Slide"
+    }
+  ],
+  "Bogatyrskaya": [
+    {
+      "id": 1,
+      "imageUrl": "https://example.com/image1.jpg",
+      "title": "First Slide"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://example.com/image2.jpg",
+      "title": "Second Slide"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://example.com/image3.jpg",
+      "title": "Third Slide"
+    }
+  ]
+}

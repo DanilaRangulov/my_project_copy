@@ -1,0 +1,30 @@
+@import "app/styles/mixins";
+.feedbackservices {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+  > p {
+    text-align: center;
+    color: #787878;
+  }
+}
+.image {
+  align-items: center;
+  justify-self: center;
+  img {
+    max-height: 80px;
+    max-width: 100px;
+  }
+}
+.stars{
+  @include normal_font_size;
+  :before {
+    content: '★★★★★';
+    color: #FFC700;
+    letter-spacing: 4px;
+  }
+}

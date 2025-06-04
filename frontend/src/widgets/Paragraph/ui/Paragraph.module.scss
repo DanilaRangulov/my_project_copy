@@ -1,0 +1,12 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.Paragraph {
+  margin: auto;
+  > h1 {
+    margin-bottom: 24px;
+  }
+  > p {
+    font-weight: $weight_medium;
+    color: $gray;
+  }
+}

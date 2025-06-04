@@ -1,0 +1,10 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.button {
+  padding: 15px 15px 15px 15px ;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  @media ($isMobile){
+    padding: 10px 10px 10px 10px;
+  }
+}

@@ -1,0 +1,8 @@
+@import "app/styles/variables/variables";
+@import "app/styles/index";
+
+.MarkdownContent {
+  p, span, li, blockquote, pre, code, strong, em {
+    @extend .medium-text;
+  }
+}

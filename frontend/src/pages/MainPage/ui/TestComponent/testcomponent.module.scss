@@ -1,0 +1,49 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.benefit_slide {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefit_content {
+  @media ($isMobile) {
+    display: flex;
+    border-bottom-left-radius: 10px;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 350px;
+    flex: 2;
+    order: 2;
+    @include default_padding;
+    @include default_border;
+  }
+  @media screen and (min-width: 560px) {
+    min-width: 300px;
+    //max-width: 540px;
+  }
+}
+.benefit_img {
+  @media ($isMobile) {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 230px;
+    z-index: -1;
+    border-bottom-right-radius: 10px;
+    order: 1;
+    flex: 1;
+    img {
+      border-bottom-right-radius: 10px;
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+    @media(min-width: 560px) {
+      max-width: 360px;
+    }
+  }
+}
+//.benefit_content, .benefit_img  {
+//  flex: 1 1 auto;
+//}

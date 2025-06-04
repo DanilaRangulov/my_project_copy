@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  border: none;
+  cursor: grab;
+  z-index: 10;
+  position: relative;
+
+
+}
+.btn div {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #6C7FE3;
+  transform-origin: 1px;
+  transition: all 0.6s;
+}

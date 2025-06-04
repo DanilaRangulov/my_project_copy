@@ -1,0 +1,108 @@
+.clinic_review_gallery {
+  //display: flex;
+  //flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.clinic_review_gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.gallery_swiper{
+  position: relative;
+}
+.swiper {
+  position: relative;
+  @media screen and (max-width: 1140px) {
+    :global(.swiper-slide) {
+      width: 366.6666666667px;
+    }
+  @media screen and (max-width: 1080px) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  }
+  @media screen and (max-width: 576px) {
+    :global(.swiper-slide) {
+      aspect-ratio: 322 / 214;
+      height: auto;
+      max-width: 420px;
+      width: 94%;
+    }
+  }
+}
+
+svg {
+  vertical-align: middle;
+}
+
+.circle_left {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  z-index: 10;
+  transform: translateY(-50%) rotate(180deg);
+  svg {
+    width: 61px;
+    height: 61px;
+  }
+  svg circle {
+    fill: white;
+    stroke: rgba(120, 120, 120, 0.5);
+    stroke-width: 2px;
+  }
+  polygon {
+    fill: #6C7FE3;
+  }
+}
+.circle_left:hover {
+  svg circle {
+    fill: #6C7FE3;
+    stroke: rgba(120, 120, 120, 0.5);
+    stroke-width: 2px;
+  }
+  svg polygon {
+    fill: white;
+  }
+}
+
+.circle_right {
+  position: absolute;
+  right: -30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  top: 50%;
+  display: block;
+  z-index: 100;
+  transform: translateY(-50%);
+  svg {
+    width: 61px;
+    height: 61px;
+  }
+  svg circle {
+    fill: white;
+    stroke: rgba(120, 120, 120, 0.5);
+    stroke-width: 2px;
+  }
+  polygon {
+    fill: #6C7FE3;
+  }
+}
+.circle_right:hover {
+  svg circle {
+    fill: #6C7FE3;
+    stroke: rgba(120, 120, 120, 0.5);
+    stroke-width: 2px;
+  }
+  svg polygon {
+    fill: white;
+  }
+}
+button[disabled]{
+  display: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+}

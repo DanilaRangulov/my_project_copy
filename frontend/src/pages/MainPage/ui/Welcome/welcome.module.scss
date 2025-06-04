@@ -1,0 +1,242 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.welcome {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5), transparent), url("shared/assets/images/welcome/welcome_background.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  overflow-x: hidden;
+  //}
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient($white 150px, transparent), url("shared/assets/images/welcome/welcome_background.png");
+  }
+}
+.welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  backdrop-filter: blur(3px);
+}
+
+.content {
+  display: flex;
+  margin: auto;
+  padding: 80px 30px 80px;
+  flex-direction: column;
+  gap: 20px;
+  @media($isMobile) {
+    padding: 15px 55px 30px 55px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 15px 15px 0px 15px;
+  }
+  //@media screen and (min-width: 767px) {
+  //  padding: 15px 30px 50px 30px;
+  //}
+}
+.welcome_title{
+  p {
+    font-weight: $weight_medium;
+  }
+  @media ($isMobile) {
+    padding: 0 10px 0 10px;
+    //display: none;
+    p {
+      color: black;
+    }
+  }
+}
+//.welcome_title_mobile{
+//  display: none;
+//  p {
+//    font-weight: $weight_medium;
+//  }
+//  @media ($isMobile) {
+//    display: block;
+//    padding: 10px;
+//    p {
+//      color: black;
+//    }
+//  }
+//}
+.welcome_content {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: space-between;
+  @media ($isMobile) {
+    @include default_padding;
+    //padding: 25px;
+    //flex-basis: 100%;
+  }
+}
+.welcome_dignities {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  //justify-content: flex-end;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p:nth-child(2n+1) {
+    font-weight: bold;
+    color: #6C7FE3;
+  }
+  p:nth-child(2n) {
+    color: #787878;
+  }
+  @media ($isMobile) {
+    justify-content: flex-start;
+    gap: 50px;
+    p:nth-child(2n+1) {
+      font-size: 36px;
+    }
+    p:nth-child(2n) {
+      color: $gray;
+    }
+  }
+}
+.welcome_left_content {
+  flex-direction: column;
+  display: flex;
+  padding-left: 40px;
+  gap: 15px;
+  justify-content: space-evenly;
+
+  flex-basis: 45%;
+  @media ($isMobile) {
+    justify-content: unset;
+    padding: 0;
+    flex-grow: 1;
+    gap: 15px;
+    //justify-content: space-evenly;
+  }
+}
+.welcome_right_content {
+  display: flex;
+  flex-basis: 45%;
+  @media ($isMobile) {
+    display: none;
+  }
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  //justify-content: flex-end;
+  @media ($isMobile) {
+    //justify-content: space-between;
+    gap: 25px;
+    justify-content: flex-start;
+  }
+}
+.welcome_quote {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: flex-end;
+  p {
+    flex-grow: 1;
+    color: #787878;
+    font-weight: $weight_normal;
+  }
+  img {
+    max-width: 50px;
+    //display: none;
+    height: auto;
+    object-fit: contain
+  }
+  @media ($isMobile) {
+    gap: 10px;
+    max-width: 400px;
+    //justify-content: space-between;
+    p {
+      flex-grow: 0;
+      flex-shrink: 1; // Текст будет сжиматься при нехватке пространства
+      color: $gray;
+    }
+    img {
+      max-width: 35px;
+      object-fit: contain
+    }
+  }
+}
+.welcome_right_content {
+  flex-basis: 45%;
+  align-self: flex-end;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  picture {
+    display: flex;
+  }
+}
+.doctor_photo {
+  position: absolute;
+  //width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 49%;
+  img {
+    display: block;
+    //width: 100%;
+    height: 100%;
+    margin: unset;
+    //max-width: 690px;
+  }
+  @media screen and (max-width: 767px) {
+    left: unset;
+    position: relative;
+    bottom: 0;
+    img {
+      max-width: 390px;
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+  //@media screen and (min-width: 767px) {
+  //  position: absolute;
+  //  bottom: 0;
+  //  width: unset;
+  //  //height: 100%;
+  //  //right: 20px;
+  //  left: 49%;
+  //  img {
+  //    margin: unset;
+  //    max-width: 590px;
+  //    height: 100%;
+  //  }
+  //}
+}
+.doctor_about {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+  :nth-child(1) {
+    font-weight: $weight_bold;
+  }
+  :nth-child(2), :nth-child(3) {
+    font-weight: $weight_light;
+  }
+  :nth-child(3) {
+    color: #bcbcbc;
+    cursor: grab;
+  }
+  p {
+    color: #3f3f3f;
+  }
+}

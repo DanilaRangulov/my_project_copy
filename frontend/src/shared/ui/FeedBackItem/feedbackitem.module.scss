@@ -1,0 +1,72 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.feed_back_item {
+  @include default_padding;
+  @include default_border;
+  display: flex;
+  //width: 520px;
+  max-height: 500px;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+  //border: 1px solid black;
+  border-radius: 10px;
+}
+.top_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  .name_photo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    img {
+      width: 100px;
+    }
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+    }
+  }
+}
+.feedback_text {
+  position: relative;
+  display: flex;
+  max-height: 240px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  .quotation {
+    img {
+      width: 35px;
+      height: auto;
+    }
+  }
+}
+.bottom_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.feedback_content{
+  display: flex;
+  //max-height: inherit;
+  //overflow: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.testtext {
+  max-height: 240px;
+  overflow: hidden;
+}
+.overflow_marker {
+  color: $gray;
+  font-weight: $weight_normal;
+  align-items: center;
+  cursor: pointer;
+}

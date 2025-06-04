@@ -1,0 +1,53 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.submit_widget {
+  display: grid;
+  //grid-template-areas: 'a a';
+  grid-template-columns: 1fr 1fr;
+  //grid-template-rows: 1fr;
+  //grid-auto-rows: minmax(100px, 500px);
+  //background: #6C7FE3;
+  //background-position: center;
+  //flex-direction: row;
+  position: relative;
+  width: 100%;
+  column-gap: 75px;
+  justify-content: center;
+}
+//.submit_widget::before {
+//  content: ""; /* Здесь можно задать текст или оставить пустым */
+//  display: block; /* Или inline-block в зависимости от ситуации */
+//  width: 100%; /* Настраивается по необходимости */
+//  height: 100%; /* Настраивается по необходимости */
+//  background: rgba(0, 0, 0, 0.4); /* Цвет или фон для псевдоэлемента */
+//  position: absolute; /* Позиционирование относительно элемента */
+//  top: 0; /* Смещение сверху */
+//  left: 0; /* Смещение слева */
+//}
+.scene {
+  @include default_padding;
+  display: flex;
+  img {
+    max-width: 100%;
+  }
+}
+.form {
+  justify-content: center;
+  @include default_padding;
+  background: #6C7FE3;
+  height: 100%;
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-evenly;
+  :nth-child(1) {
+    font-weight: $weight-bold;
+  }
+  :nth-child(3) {
+    margin-top: 30px;
+  }
+  p {
+    color: $white;
+  }
+}

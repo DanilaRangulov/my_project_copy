@@ -1,0 +1,44 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.benefit_button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  > p {
+    text-align: left;
+    color: #787878;
+  }
+  > svg {
+    width: 44px;
+    height: 44px;
+    //height: 100%;
+    fill: #787878;
+  }
+}
+.benefit_button:hover {
+  cursor: grab;
+  > p {
+    color: #a3a3a3;
+  }
+  > svg {
+    fill: #a3a3a3;
+  }
+}
+.active_button {
+  position: relative;
+  > p {
+    color: #000000 !important;
+    transition: color 0.2s linear;
+  }
+  > svg {
+    fill: #000000 !important;
+    transition: fill 0.2s linear;
+  }
+}
+.active_button::after {
+  width: 100%;
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid black;
+  bottom: -8px;
+}

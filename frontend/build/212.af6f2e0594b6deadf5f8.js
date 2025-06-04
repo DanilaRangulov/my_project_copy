@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknikaclinicsite=self.webpackChunknikaclinicsite||[]).push([[212],{212:(i,n,c)=>{c.r(n),c.d(n,{default:()=>s});var e=c(4848);const s=function(){return(0,e.jsx)("div",{children:"На производстве..."})}}}]);

@@ -1,0 +1,15 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.specialistsList {
+  width: 100%;
+}
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(325px,1fr));
+  gap: 20px;
+  @include default_padding_block;
+}
+.btn {
+  margin: 20px auto 0 auto;
+}

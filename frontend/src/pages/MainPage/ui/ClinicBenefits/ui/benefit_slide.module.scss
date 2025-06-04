@@ -1,0 +1,83 @@
+@import "app/styles/variables/variables";
+@import "app/styles/mixins";
+.benefit_slide {
+  background-color: transparent;
+  display: grid;
+  justify-content: flex-end;
+  //padding-top: 150px;
+  height: 480px;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  @media ($isMobile) {
+    gap: 0;
+    height: unset;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden
+  }
+}
+.benefit_content {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 7;
+  grid-column-end: 13;
+  gap: 10px;
+  position: relative;
+  @media ($isMobile) {
+    display: flex;
+    align-self: unset;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 220px;
+    flex: 2;
+    order: 2;
+    @include default_padding;
+    @include default_border;
+  }
+  @media (min-width: 560px) and ($isMobile) {
+    min-width: 280px;
+    //max-width: 540px;
+  }
+}
+.benefit_img {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: red;
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  @media ($isMobile) {
+    display: block;
+    position: relative;
+    height: unset;
+    width: 100%;
+    min-width: 230px;
+    z-index: -1;
+    order: 1;
+    flex: 1;
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  @media(min-width: 560px) and ($isMobile) {
+    max-width: 360px;
+  }
+}
+//.benefit_content,
+//.benefit_img {
+//  flex: 1; // Заставляем оба блока занимать равную высоту
+//}
